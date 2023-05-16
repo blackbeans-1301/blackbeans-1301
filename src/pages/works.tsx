@@ -15,7 +15,7 @@ export default function Works() {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           {works.map((item) => (
-            <Section delay={0.2} key={item.id}>
+            <Section delay="0.2" key={item.id}>
               <WorkGridItem
                 id={item.id}
                 title={item.title}

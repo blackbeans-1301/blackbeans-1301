@@ -15,7 +15,7 @@ export function GridItem({
   thumbnail: string;
 }) {
   return (
-    <Box w="100%" align="center">
+    <Box w="100%" textAlign="center">
       <LinkBox cursor="pointer">
         <Image
           alt="thubnail"
@@ -45,7 +45,7 @@ export function WorkGridItem({
   thumbnail: any;
 }) {
   return (
-    <Box w="100%" align="center">
+    <Box w="100%" textAlign="center">
       <NextLink href={`/works/${id}`}>
         <LinkBox as="span" cursor="pointer">
           <Image

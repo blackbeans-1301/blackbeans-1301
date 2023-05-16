@@ -36,7 +36,7 @@ export default function Home() {
             flexShrink={0}
             mt={{ base: 4, md: 0 }}
             ml={{ md: 6 }}
-            align="center"
+            textAlign="center"
           >
             <Image
               src="/images/avatar.jpg"
@@ -50,7 +50,7 @@ export default function Home() {
             ></Image>
           </Box>
         </Box>
-        <Section delay={0.1}>
+        <Section delay="0.1">
           <Heading as="h3" variant="section-title">
             Work
           </Heading>
@@ -63,7 +63,7 @@ export default function Home() {
             <Highlighter>DevOps - SysAdmin</Highlighter> trong tương lai.
           </Paragraph>
 
-          <Box align="center" my={8}>
+          <Box textAlign="center" my={8}>
             <NextLink href="/works">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My Porfolio
@@ -72,7 +72,7 @@ export default function Home() {
           </Box>
         </Section>
 
-        <Section delay={0.1}>
+        <Section delay="0.1">
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>
@@ -86,7 +86,7 @@ export default function Home() {
           })}
         </Section>
 
-        <Section delay={0.1}>
+        <Section delay="0.1">
           <Heading as="h3" variant="section-title">
             Favorites ❤️
           </Heading>

@@ -1,21 +1,21 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, LegacyRef } from "react";
 import { Box, Spinner } from "@chakra-ui/react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "@/lib/model";
 
 export default function VoxelDog() {
-  const refContainer = useRef();
+  const refContainer = useRef<HTMLDivElement | null>(null);
   const [loading, setLoading] = useState(true);
-  const refRenderer = useRef();
+  const refRenderer = useRef<THREE.WebGLRenderer | null>(null);
   // const urlDogGLB =
   //   (process.env.NODE_ENV === "production"
   //     ? "https://craftzdog.global.ssl.fastly.net/homepage"
   //     : "") + "/dog.glb";
 
   const handleWindowResize = useCallback(() => {
-    const { current: renderer } = refRenderer;
-    const { current: container } = refContainer;
+    const { current: renderer } = refRenderer as any;
+    const { current: container } = refContainer as any;
     if (container && renderer) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
@@ -26,7 +26,7 @@ export default function VoxelDog() {
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
-    const { current: container } = refContainer;
+    const { current: container } = refContainer as any;
     if (container) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
@@ -78,7 +78,7 @@ export default function VoxelDog() {
         setLoading(false);
       });
 
-      let req = null;
+      let req = null as any;
       let frame = 0;
       const animate = () => {
         req = requestAnimationFrame(animate);
