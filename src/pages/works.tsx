@@ -2,25 +2,31 @@ import { Container, Box, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
 import Section from "@/components/section";
 import { WorkGridItem } from "@/components/grid-item";
 import thumbnailBlackhole from "../../public/images/jett.jpg";
+import { works } from "@/data/data";
+import Layout from "@/components/layouts/article";
 
 export default function Works() {
   return (
-    <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        Works
-      </Heading>
+    <Layout title="Projects">
+      <Container>
+        <Heading as="h3" fontSize={20} mb={4}>
+          Works
+        </Heading>
 
-      <SimpleGrid column={[1, 1, 2]} gap={6}>
-        <Section delay={0.2}>
-          <WorkGridItem
-            id="black-hole"
-            title="Blackhole"
-            thumbnail={thumbnailBlackhole}
-          >
-            A music app for mobile
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
-    </Container>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          {works.map((item) => (
+            <Section delay={0.2} key={item.id}>
+              <WorkGridItem
+                id={item.id}
+                title={item.title}
+                thumbnail={item.thumbnail}
+              >
+                {item.description}
+              </WorkGridItem>
+            </Section>
+          ))}
+        </SimpleGrid>
+      </Container>
+    </Layout>
   );
 }

@@ -53,6 +53,7 @@ export function WorkGridItem({
             src={thumbnail}
             className="grid-item-thumbnail"
             placeholder="blur"
+            loading="lazy"
           />
           <LinkOverlay as="span" href={`/works/${id}`}>
             <Text mt={2} fontSize={20}>

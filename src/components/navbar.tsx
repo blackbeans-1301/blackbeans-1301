@@ -18,39 +18,23 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Nunito } from "next/font/google";
 import ThemeToggleButton from "@/components/theme-toggle-button";
+import { navbarItems } from "@/data/data";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
 export default function Navbar(props: any) {
   const { path } = props;
-  const navbarItems = [
-    {
-      id: 1,
-      name: "Home",
-      href: "/",
-    },
-    {
-      id: 2,
-      name: "Projects",
-      href: "/projects",
-    },
-    {
-      id: 3,
-      name: "Git",
-      href: "https://github.com/blackbeans-1301",
-      iconUrl: "/logo/github-icon.png",
-    },
-  ];
-
   const inactiveColor = useColorModeValue("black", "whiteAlpha.900");
 
   return (
     <Box
       position="fixed"
+      zIndex={100}
       as="nav"
       w="100%"
       bg={useColorModeValue("#ffffff", "#202023")}
       style={{ backdropFilter: "blur(10px)" }}
+      {...props}
     >
       <Container
         display="flex"
@@ -101,10 +85,8 @@ export default function Navbar(props: any) {
                 {navbarItems.map((item) => {
                   return (
                     <NextLink href={item.href} passHref key={item.id}>
-                      <MenuItem>
-                        <Link as="span" p={2} color={inactiveColor}>
-                          {item.name}
-                        </Link>
+                      <MenuItem as="span" p={2} color={inactiveColor}>
+                        {item.name}
                       </MenuItem>
                     </NextLink>
                   );
