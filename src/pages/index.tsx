@@ -5,9 +5,14 @@ import {
   Image,
   useColorModeValue,
   Button,
+  SimpleGrid,
+  List,
+  ListItem,
+  Link,
+  Icon,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { Inter } from "next/font/google";
+import { GridItem } from "@/components/grid-item";
 import Section from "@/components/section";
 import Paragraph from "@/components/paragraph";
 import Highlighter from "@/components/highlighter";
@@ -15,6 +20,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioYear, BioSection } from "@/components/bio";
 import { bioData } from "@/data/data";
 import Layout from "@/components/layouts/article";
+import { socialMedia } from "@/data/socialData";
 
 export default function Home() {
   const introColor = useColorModeValue("whiteAlpha.500", "whiteAlpha.200");
@@ -93,6 +99,28 @@ export default function Home() {
           <Paragraph>
             Games, Graphics Design, Pixel Art, Game development.
           </Paragraph>
+        </Section>
+
+        <Section delay="0.1">
+          <Heading as="h3" variant="section-title">
+            Social
+          </Heading>
+          <List>
+            {socialMedia.map((item) => (
+              <ListItem key={item.id} ml={2} p={2}>
+                <Link
+                  href={item.link}
+                  display="flex"
+                  alignItems="center"
+                  color="glassTeal"
+                  target="_blank"
+                >
+                  {item.icon} <Box mx={2}></Box>{" "}
+                  <strong className="font-semibold">{item.title}</strong>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
         </Section>
       </Container>
     </Layout>

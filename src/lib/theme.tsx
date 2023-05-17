@@ -37,7 +37,7 @@ const fonts = {
 };
 
 const colors = {
-  glassTeal: "orange",
+  glassTeal: "#88ccca",
 };
 
 const theme = extendTheme({

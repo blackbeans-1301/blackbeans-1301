@@ -25,12 +25,17 @@ export default function Logo() {
   return (
     <Link href="/">
       <LogoBox>
-        <Image src="/logo-dark.png" width={20} height={20} alt="logo"></Image>
+        <Image
+          src={`/logo${useColorModeValue("-dark", "")}.png`}
+          width={25}
+          height={25}
+          alt="logo"
+        ></Image>
         <Text
           color={useColorModeValue("gray.800", "whiteAlpha.900")}
           fontWeight="bold"
           fontSize="18px"
-          ml={3}
+          ml={1}
           className={nunito.className}
         >
           Blackbeans

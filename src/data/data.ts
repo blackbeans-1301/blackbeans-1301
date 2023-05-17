@@ -57,6 +57,8 @@ export const postDatas = [
       "Blackhole là một ứng dụng nghe nhạc dành cho các thiết bị di động với giao diện thân thiện và dễ sử dụng cùng với kho nhạc online phong phú.",
     platform: "Android",
     stack: "React Native, Expo, Android Studio",
+    position: "Fullstack/Mobile Developer",
+    githubUrl: "https://github.com/blackbeans-1301/blackhole-termprj",
     images: [
       "https://www.craftz.dog/images/works/inkdrop_01.png",
       "https://www.craftz.dog/images/works/inkdrop_02.png",
@@ -70,6 +72,8 @@ export const postDatas = [
       "Booking Hub hướng đến người sử dụng là những lữ khách du lịch nhằm phục vụ việc đặt phòng thuê khách sạn/nhà nghỉ.",
     platform: "Windows/macOS/Linux/iOS/Android",
     stack: "ReactJS, TailwindCSS, ExpressJS, MySQL database",
+    position: "Front-end developer",
+    githubUrl: "https://github.com/blackbeans-1301/BookingHub",
     images: [
       "https://www.craftz.dog/images/works/inkdrop_01.png",
       "https://www.craftz.dog/images/works/inkdrop_02.png",

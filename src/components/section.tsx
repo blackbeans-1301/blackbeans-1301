@@ -19,7 +19,7 @@ export default function Section({
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: "0.2", delay: delay }}
-      mb={6}
+      mb={{ base: 8 }}
     >
       {children}
     </StyledDiv>
