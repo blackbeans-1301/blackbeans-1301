@@ -16,6 +16,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { IoLogoGithub } from "react-icons/io";
 import { Nunito } from "next/font/google";
 import ThemeToggleButton from "@/components/theme-toggle-button";
 import { navbarItems } from "@/data/data";
@@ -59,12 +60,13 @@ export default function Navbar(props: any) {
         >
           {navbarItems.map((item) => {
             return (
-              <LinkItem
-                href={item.href}
-                path={path}
-                key={item.id}
-                icon={item.iconUrl}
-              >
+              <LinkItem href={item.href} path={path} key={item.id}>
+                {item.id === 3 && (
+                  <>
+                    <IoLogoGithub size={20} />
+                    &nbsp;
+                  </>
+                )}
                 {item.name}
               </LinkItem>
             );
@@ -87,6 +89,12 @@ export default function Navbar(props: any) {
                     <NextLink href={item.href} passHref key={item.id}>
                       <MenuItem as="span" p={2} color={inactiveColor}>
                         {item.name}
+                        {item.id === 3 && (
+                          <>
+                            &nbsp;
+                            <IoLogoGithub size={20} />
+                          </>
+                        )}
                       </MenuItem>
                     </NextLink>
                   );
@@ -103,23 +111,28 @@ export default function Navbar(props: any) {
 const LinkItem = ({
   href,
   path,
-  icon,
   children,
 }: {
   href: string;
   path: string;
-  icon: string | undefined;
   children: any;
 }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue("black", "whiteAlpha.900");
+
+  let target = "";
+  if (href === "https://github.com/blackbeans-1301/bb-portfolio") {
+    target = "_blank";
+  }
+
   return (
-    <NextLink className={nunito.className} href={href} passHref>
+    <NextLink className={nunito.className} href={href} target={target} passHref>
       <Link
         as="span"
         p={2}
         color={active ? "glassTeal" : inactiveColor}
         bg={active ? "#202023" : undefined}
+        display="flex"
       >
         {children}
       </Link>

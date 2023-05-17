@@ -63,7 +63,8 @@ export default function Work({}) {
             <ListItem>
               <Meta>Repository</Meta>
               <Link as="span" href={data.githubUrl}>
-                {data.githubUrl} <ExternalLinkIcon mx="2px" />
+                {data.githubUrl}
+                <ExternalLinkIcon mx="2px" />
               </Link>
             </ListItem>
           </List>
