@@ -56,17 +56,25 @@ export default function Home() {
             ></Image>
           </Box>
         </Box>
-        <Section delay="0.1">
+        <Section delay="0.4">
           <Heading as="h3" variant="section-title">
             Work
           </Heading>
           <Paragraph>
-            Xin chào, tôi là một sinh viên <Highlighter>năm 4</Highlighter> hiện
-            đang theo học tại trường Đại học Công nghệ - ĐHQGHN. Với niềm đam mê
-            trong lĩnh vực công nghệ thông tin và đặc biệt quan tâm đến phát
-            triển ứng dụng web, mobile và game. Tôi hướng đến{" "}
-            <Highlighter>fullstack developer</Highlighter> và{" "}
-            <Highlighter>DevOps - SysAdmin</Highlighter> trong tương lai.
+            Xin chào! Tôi là sinh viên năm 4 hiện đang theo học tại trường Đại
+            học Công nghệ - ĐHQGHN (UET). Công nghệ thông tin là ngành học cũng
+            như sở thích của tôi. Tôi hướng đến việc phát triển ứng dụng web,
+            ứng dụng đa nền tảng, indie game và trở thành Devops Engineer trong
+            tương lai.
+          </Paragraph>
+
+          <Paragraph>
+            Tôi có hơn 1 năm kinh nghiệm với vị trí&nbsp;
+            <Highlighter>Fullstack</Highlighter> và&nbsp;
+            <Highlighter>Mobile</Highlighter> developer. Một số project có thể
+            kể đến của tôi như ứng dụng nghe nhạc BlackHole, hệ thống đặt phòng
+            khách sạn BookingHub, ứng dụng quản lý công việc,... Và một số ứng
+            dụng khác bạn có thể xem ở phần Portfolio dưới đây.
           </Paragraph>
 
           <Box textAlign="center" my={8}>
@@ -78,7 +86,7 @@ export default function Home() {
           </Box>
         </Section>
 
-        <Section delay="0.1">
+        <Section delay="0.4">
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>
@@ -92,7 +100,7 @@ export default function Home() {
           })}
         </Section>
 
-        <Section delay="0.1">
+        <Section delay="0.4">
           <Heading as="h3" variant="section-title">
             Favorites ❤️
           </Heading>
@@ -101,7 +109,7 @@ export default function Home() {
           </Paragraph>
         </Section>
 
-        <Section delay="0.1">
+        <Section delay="0.3">
           <Heading as="h3" variant="section-title">
             Social
           </Heading>
@@ -112,7 +120,8 @@ export default function Home() {
                   href={item.link}
                   display="flex"
                   alignItems="center"
-                  color="glassTeal"
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  color={useColorModeValue("glassTeal-dark", "glassTeal")}
                   target="_blank"
                 >
                   {item.icon} <Box mx={2}></Box>{" "}

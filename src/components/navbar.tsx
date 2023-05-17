@@ -29,11 +29,11 @@ export default function Navbar(props: any) {
   return (
     <Box
       position="fixed"
-      zIndex={100}
       as="nav"
       w="100%"
-      bg={useColorModeValue("#ffffff", "#202023")}
-      style={{ backdropFilter: "blur(10px)" }}
+      bg={useColorModeValue("#ffffff40", "#20202380")}
+      backdropFilter="blur(10px)"
+      zIndex={1}
       {...props}
     >
       <Container
