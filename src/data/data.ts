@@ -34,24 +34,50 @@ export const navbarItems = [
   },
 ];
 
+export const skillSet = [
+  {
+    id: 1,
+    label: "Programming Language",
+    descriptions: ["JavaScript/Python/Dart"],
+  },
+  {
+    id: 2,
+    label: "Web Development",
+    descriptions: [
+      "Responsive",
+      "AngularJS",
+      "ReactJS và React Framework như Gatsby, Next",
+      "NodeJS, Flask (python)",
+    ],
+  },
+  {
+    id: 3,
+    label: "Mobile Development",
+    descriptions: [
+      "Responsive",
+      "React Native",
+      "Flutter (Dart)",
+      "AWS Amplify",
+      "Firebase",
+    ],
+  },
+  {
+    id: 4,
+    label: "Database",
+    descriptions: ["MySql Server", "MongoDB"],
+  },
+  {
+    id: 5,
+    label: "External Skills",
+    descriptions: [
+      "Nghe/Đọc/Hiểu tiếng Anh cơ tố, có thể giao tiếp cơ bản",
+      "Tiếp thu nhanh, có khả năng tự học",
+      "Thiết kế giao diện ứng dụng cơ bản (basic UI design)",
+    ],
+  },
+];
+
 export const works = [
-  // {
-  //   id: "portfolio",
-  //   title: "Porfolio Site",
-  //   createdAt: "2023",
-  //   shortDescription: "Trang web giới thiệu về bản thân và các project đã làm.",
-  //   description:
-  //     "Là một trang web với mục đích giới thiệu bản thân và các dự án đã thực hiện trước đây",
-  //   platform: "Windows/macOS/Linux/iOS/Android",
-  //   stack: "NextJS, Chakra-ui, TailwindCss",
-  //   position: "Front-end Developer",
-  //   githubUrl: "https://github.com/blackbeans-1301/bb-portfolio",
-  //   thumbnail: portfolioThumbnail,
-  //   images: [
-  //     "https://i.imgur.com/wQHHTqH.png",
-  //     "https://i.imgur.com/agojThk.png",
-  //   ],
-  // },
   {
     id: "blackhole",
     title: "Blackhole",
@@ -102,6 +128,23 @@ export const works = [
     images: [
       "https://lh3.googleusercontent.com/MWs95lKc0LiJnlbeiDJikT3B3AU3w5pL3M8RiOF3fGHimu4jwlHrmWCI4jIqZPqCIkWqjIOPtdFCyD-_v04sOwhR9A=w640-h400-e365-rj-sc0x00ffffff",
       "https://vnreview.vn/image/94/91/949163.jpg?t=1392128083924",
+    ],
+  },
+  {
+    id: "portfolio",
+    title: "Porfolio Site",
+    createdAt: "2023",
+    shortDescription: "Trang web giới thiệu về bản thân và các project đã làm.",
+    description:
+      "Là một trang web với mục đích giới thiệu bản thân và các dự án đã thực hiện trước đây",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "NextJS, Chakra-ui, TailwindCss",
+    position: "Front-end Developer",
+    githubUrl: "https://github.com/blackbeans-1301/bb-portfolio",
+    thumbnail: portfolioThumbnail,
+    images: [
+      "https://i.imgur.com/wQHHTqH.png",
+      "https://i.imgur.com/agojThk.png",
     ],
   },
 ];

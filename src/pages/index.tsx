@@ -58,7 +58,7 @@ export default function Home() {
         </Box>
         <Section delay="0.4">
           <Heading as="h3" variant="section-title">
-            Work
+            Work 🎯
           </Heading>
           <Paragraph>
             Xin chào! Tôi là sinh viên năm 4 hiện đang theo học tại trường Đại
@@ -88,7 +88,7 @@ export default function Home() {
 
         <Section delay="0.4">
           <Heading as="h3" variant="section-title">
-            Bio
+            Skill Set 💪
           </Heading>
           {bioData.map((data) => {
             return (
@@ -102,7 +102,23 @@ export default function Home() {
 
         <Section delay="0.4">
           <Heading as="h3" variant="section-title">
-            Favorites ❤️
+            Bio 🧬
+          </Heading>
+          <Box ml={5}>
+            {bioData.map((data) => {
+              return (
+                <BioSection key={data.id}>
+                  <BioYear>{data.year}</BioYear>
+                  {data.description}
+                </BioSection>
+              );
+            })}
+          </Box>
+        </Section>
+
+        <Section delay="0.4">
+          <Heading as="h3" variant="section-title">
+            Favorites 🎨
           </Heading>
           <Paragraph>
             Games, Graphics Design, Pixel Art, Game development.
@@ -111,7 +127,7 @@ export default function Home() {
 
         <Section delay="0.3">
           <Heading as="h3" variant="section-title">
-            Social
+            Social 📱
           </Heading>
           <List>
             {socialMedia.map((item) => (
