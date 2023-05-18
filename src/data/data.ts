@@ -1,16 +1,21 @@
-import blackholeThumbnail from "../../public/images/blackhole.jpg";
-import bookinghubThumbnail from "../../public/images/travel.jpg";
-import flappybirdThumbnail from "../../public/images/flappy-bird.jpg";
-import portfolioThumbnail from "../../public/images/portfolio-thumbnail.png";
+import blackholeThumbnail from "../../public/thumbnail/blackhole.jpg";
+import bookinghubThumbnail from "../../public/thumbnail/booking.png";
+import chewchewThumbnail from "../../public/thumbnail/chewchew.png";
+import fourhandyThumbnail from "../../public/thumbnail/4handy.png";
+import fourhandyFlutterThumbnail from "../../public/thumbnail/4handy-flutter.png";
+import savorThumbnail from "../../public/thumbnail/savor.png";
+import flappybirdThumbnail from "../../public/thumbnail/flappy-bird.jpg";
+import bedtimeThumbnail from "../../public/thumbnail/bedtime.png";
+import portfolioThumbnail from "../../public/thumbnail/portfolio-thumbnail.png";
 
 export const bioData = [
   {
-    id: 2,
+    id: 1,
     year: "2020",
     description: "Bắt đầu học CNTT tại trường Đại học Công nghệ - ĐHQGHN(UET).",
   },
   {
-    id: 3,
+    id: 2,
     year: "2022",
     description: "Làm việc tại 4Handy với vai trò fullstack/mobile developer.",
   },
@@ -37,13 +42,13 @@ export const navbarItems = [
 export const skillSet = [
   {
     id: 1,
-    label: "Programming Language",
-    descriptions: ["JavaScript/Python/Dart"],
+    category: "Programming Language",
+    skills: ["JavaScript/Python/Dart"],
   },
   {
     id: 2,
-    label: "Web Development",
-    descriptions: [
+    category: "Web Development",
+    skills: [
       "Responsive",
       "AngularJS",
       "ReactJS và React Framework như Gatsby, Next",
@@ -52,32 +57,95 @@ export const skillSet = [
   },
   {
     id: 3,
-    label: "Mobile Development",
-    descriptions: [
-      "Responsive",
-      "React Native",
-      "Flutter (Dart)",
-      "AWS Amplify",
-      "Firebase",
-    ],
+    category: "Mobile Development",
+    skills: ["React Native", "Flutter (Dart)", "AWS Amplify", "Firebase"],
   },
   {
     id: 4,
-    label: "Database",
-    descriptions: ["MySql Server", "MongoDB"],
+    category: "Database",
+    skills: ["MySql Server", "MongoDB"],
   },
   {
     id: 5,
-    label: "External Skills",
-    descriptions: [
-      "Nghe/Đọc/Hiểu tiếng Anh cơ tố, có thể giao tiếp cơ bản",
-      "Tiếp thu nhanh, có khả năng tự học",
-      "Thiết kế giao diện ứng dụng cơ bản (basic UI design)",
+    category: "External Skills",
+    skills: [
+      "Nghe/Đọc/Hiểu tiếng Anh và giao tiếp cơ bản.",
+      "Tiếp thu nhanh, có khả năng tự học.",
+      "Thiết kế giao diện ứng dụng cơ bản (basic UI design).",
     ],
   },
 ];
 
-export const works = [
+export const webDevelopment = [
+  {
+    id: "savor",
+    title: "Savor",
+    createdAt: "2022",
+    shortDescription:
+      "Ứng dụng web giới thiệu các mẫu bánh sinh nhật và đặt hàng online.",
+    description:
+      "Savor là web dùng để giới thiệu các mẫu bánh của hệ thống bánh ngọt - trà sữa Savor. Trang web này nhằm giới thiệu các mẫu bánh kem và cho phép người dùng đặt bánh online.",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "ReactJS, TailwindCss, 4Handy API.",
+    position: "Front-end Developer",
+    githubUrl: "private",
+    thumbnail: savorThumbnail,
+    images: [
+      "https://i.imgur.com/vi0A0BQ.png",
+      "https://i.imgur.com/AjNYEzj.png",
+    ],
+  },
+  {
+    id: "four-handy-work",
+    title: "4Handy Work",
+    createdAt: "2022",
+    shortDescription: "Web quản lý công việc tại 4Handy.",
+    description: "Web quản lý công việc tại 4Handy.",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "AngularJS, MongoDB, ExpressJS, Redis.",
+    position: "FullStack Developer.",
+    githubUrl: "private",
+    thumbnail: fourhandyThumbnail,
+    images: [
+      "https://i.imgur.com/konUosS.png",
+      "https://i.imgur.com/8yZFdGm.png",
+    ],
+  },
+  {
+    id: "booking-hub",
+    title: "Booking Hub",
+    createdAt: "2022",
+    shortDescription:
+      "Ứng dụng web hỗ trợ đặt phòng khách sạn/nhà nghỉ online cho du khách.",
+    description:
+      "Booking Hub hướng đến người sử dụng là những lữ khách du lịch nhằm phục vụ việc đặt phòng thuê khách sạn/nhà nghỉ.",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "ReactJS, TailwindCSS, ExpressJS, MySQL database",
+    position: "Front-end developer",
+    githubUrl: "https://github.com/blackbeans-1301/BookingHub",
+    thumbnail: bookinghubThumbnail,
+    images: [
+      "https://i.imgur.com/qtIsLQM.png",
+      "https://i.imgur.com/kY7mJu9.png",
+    ],
+  },
+  {
+    id: "chew",
+    title: "ChewChew",
+    createdAt: "2021",
+    shortDescription: "Trang web bán đồ cho thú cưng.",
+    description:
+      "ChewChew được tạo ra với mục đích làm trang web bán đồ cho thú cưng. Lấy cảm hứng từ Chewy.",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "Html, CSS, Javascript, ExpressJS, MongoDB",
+    position: "Front-end developer",
+    githubUrl: "https://github.com/blackbeans-1301/chew",
+    thumbnail: chewchewThumbnail,
+    images: ["https://i.imgur.com/nvdoGs4.png"],
+  },
+];
+
+export const mobileDevelopment = [
   {
     id: "blackhole",
     title: "Blackhole",
@@ -92,28 +160,46 @@ export const works = [
     githubUrl: "https://github.com/blackbeans-1301/blackhole-termprj",
     thumbnail: blackholeThumbnail,
     images: [
-      "https://www.craftz.dog/images/works/inkdrop_01.png",
-      "https://www.craftz.dog/images/works/inkdrop_02.png",
+      "https://i.imgur.com/L8TF8Rq.png",
+      "https://i.imgur.com/6jk6bMy.png",
     ],
   },
   {
-    id: "bookinghub",
-    title: "Booking Hub",
-    createdAt: "2022",
+    id: "four-handy-flutter",
+    title: "4Handy Mobile",
+    createdAt: "2021",
     shortDescription:
-      "Ứng dụng web hỗ trợ đặt phòng khách sạn/nhà nghỉ online cho du khách.",
+      "Ứng dụng quản lý công việc tại 4Handy dành cho thiết bị di động.",
     description:
-      "Booking Hub hướng đến người sử dụng là những lữ khách du lịch nhằm phục vụ việc đặt phòng thuê khách sạn/nhà nghỉ.",
-    platform: "Windows/macOS/Linux/iOS/Android",
-    stack: "ReactJS, TailwindCSS, ExpressJS, MySQL database",
-    position: "Front-end developer",
-    githubUrl: "https://github.com/blackbeans-1301/BookingHub",
-    thumbnail: bookinghubThumbnail,
+      "Ứng dụng quản lý công việc tại 4Handy dành cho thiết bị di động.",
+    platform: "Android/iOS",
+    stack: "Flutter, 4Handy API, Android Studio, Firebase.",
+    position: "Mobile Developer",
+    githubUrl: "private",
+    thumbnail: fourhandyFlutterThumbnail,
     images: [
-      "https://www.craftz.dog/images/works/inkdrop_01.png",
-      "https://www.craftz.dog/images/works/inkdrop_02.png",
+      "https://i.imgur.com/OP2vQay.png",
+      "https://i.imgur.com/0e7P2tF.png",
     ],
   },
+  {
+    id: "bedtime",
+    title: "Bedtime",
+    createdAt: "2023",
+    shortDescription:
+      "Ứng dụng hỗ trợ cho việc tăng chất lượng giấc ngủ dành cho di động.",
+    description:
+      "Ứng dụng hỗ trợ cho việc tăng chất lượng giấc ngủ dành cho di động.",
+    platform: "Android/iOS",
+    stack: "Flutter, Android Studio, Firebase.",
+    position: "Mobile Developer",
+    githubUrl: "https://github.com/blackbeans-1301/bedtime",
+    thumbnail: bedtimeThumbnail,
+    images: ["https://i.imgur.com/9NLKkQ1.png"],
+  },
+];
+
+export const otherProjects = [
   {
     id: "flappy-bird",
     title: "Flappy Bird Clone",
@@ -126,25 +212,8 @@ export const works = [
     githubUrl: "https://github.com/blackbeans-1301/flappy-bird-clone",
     thumbnail: flappybirdThumbnail,
     images: [
-      "https://lh3.googleusercontent.com/MWs95lKc0LiJnlbeiDJikT3B3AU3w5pL3M8RiOF3fGHimu4jwlHrmWCI4jIqZPqCIkWqjIOPtdFCyD-_v04sOwhR9A=w640-h400-e365-rj-sc0x00ffffff",
-      "https://vnreview.vn/image/94/91/949163.jpg?t=1392128083924",
-    ],
-  },
-  {
-    id: "portfolio",
-    title: "Porfolio Site",
-    createdAt: "2023",
-    shortDescription: "Trang web giới thiệu về bản thân và các project đã làm.",
-    description:
-      "Là một trang web với mục đích giới thiệu bản thân và các dự án đã thực hiện trước đây",
-    platform: "Windows/macOS/Linux/iOS/Android",
-    stack: "NextJS, Chakra-ui, TailwindCss",
-    position: "Front-end Developer",
-    githubUrl: "https://github.com/blackbeans-1301/bb-portfolio",
-    thumbnail: portfolioThumbnail,
-    images: [
-      "https://i.imgur.com/wQHHTqH.png",
-      "https://i.imgur.com/agojThk.png",
+      "https://cdn.tgdd.vn/Files/2022/07/18/1448628/h2_1280x720-800-resize.jpg",
+      "https://static.tuoitre.vn/tto/i/s626/2014/02/10/LY7rBkqu.jpg",
     ],
   },
 ];

@@ -18,7 +18,8 @@ import Paragraph from "@/components/paragraph";
 import Highlighter from "@/components/highlighter";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioYear, BioSection } from "@/components/bio";
-import { bioData } from "@/data/data";
+import { bioData, skillSet } from "@/data/data";
+import SkillSetSection from "@/components/skillSet";
 import Layout from "@/components/layouts/article";
 import { socialMedia } from "@/data/socialData";
 
@@ -90,14 +91,17 @@ export default function Home() {
           <Heading as="h3" variant="section-title">
             Skill Set 💪
           </Heading>
-          {bioData.map((data) => {
-            return (
-              <BioSection key={data.id}>
-                <BioYear>{data.year}</BioYear>
-                {data.description}
-              </BioSection>
-            );
-          })}
+          <Box>
+            {skillSet.map((data) => {
+              return (
+                <SkillSetSection
+                  category={data.category}
+                  skills={data.skills}
+                  key={data.id}
+                />
+              );
+            })}
+          </Box>
         </Section>
 
         <Section delay="0.4">
