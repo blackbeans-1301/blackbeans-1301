@@ -16,7 +16,7 @@ Joined github from 2020
 
 ### Talking about Personal Stuff:
 
-- 🛠 &nbsp; I’m currently working with TS, AWS, FLUTTER, etc.
+- 🛠 &nbsp; I’m currently working with TS, GCP, FLUTTER, etc.
 - 🚀 &nbsp; I’m currently exploring COMPUTER VISION, NETWORKING, etc.
 - 📫 &nbsp; Reach me out: blackbeans.1301@gmail.com.
 
