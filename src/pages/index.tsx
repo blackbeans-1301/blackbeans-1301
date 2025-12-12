@@ -25,19 +25,20 @@ import { socialMedia } from "@/data/socialData";
 
 export default function Home() {
   const introColor = useColorModeValue("whiteAlpha.500", "whiteAlpha.200");
+  const linkColor = useColorModeValue("glassTeal-dark", "glassTeal");
 
   return (
     <Layout title="Home">
       <Container>
         <Box textAlign="center" borderRadius="lg" bg={introColor} p={3} mb={6}>
-          Hello, I&apos;m fullstack developer.
+          Hello, I&apos;m a fullstack developer and playable ads developer.
         </Box>
         <Box display={{ md: "flex" }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
               Đỗ Tấn Lập
             </Heading>
-            <p className="text-sm">Fullstack/Mobile Developer</p>
+            <p className="text-sm">Fullstack Developer | Playable Ads Developer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -62,26 +63,26 @@ export default function Home() {
             Work 🎯
           </Heading>
           <Paragraph>
-            Xin chào! Tôi là sinh viên năm 4 hiện đang theo học tại trường Đại
-            học Công nghệ - ĐHQGHN (UET). Công nghệ thông tin là ngành học cũng
-            như sở thích của tôi. Tôi hướng đến việc phát triển ứng dụng web,
-            ứng dụng đa nền tảng, indie game và trở thành Devops Engineer trong
-            tương lai.
+            Hello! I&apos;m a software developer with over 4 years of experience, graduated from
+            UET-VNU.
+            Information technology is not just my profession but also my passion. I specialize in
+            developing web applications, cross-platform mobile apps, and interactive playable ads
+            for gaming and advertising.
           </Paragraph>
 
           <Paragraph>
-            Tôi có hơn 1 năm kinh nghiệm với vị trí&nbsp;
-            <Highlighter>Fullstack</Highlighter> và&nbsp;
-            <Highlighter>Mobile</Highlighter> developer. Một số project có thể
-            kể đến của tôi như ứng dụng nghe nhạc BlackHole, hệ thống đặt phòng
-            khách sạn BookingHub, ứng dụng quản lý công việc,... Và một số ứng
-            dụng khác bạn có thể xem ở phần Portfolio dưới đây.
+            I have 4+ years of experience as a&nbsp;
+            <Highlighter>Fullstack Developer (4+ years)</Highlighter> and&nbsp;
+            <Highlighter>Playable Ads Developer (almost 2 years)</Highlighter>. Some of my notable
+            projects include the <NextLink target="_blank" href="https://mindboard.space" style={{ textDecoration: 'underline', fontWeight: 'bold' }}>MindBoard</NextLink> AI chat node based
+            app, <NextLink href="https://pacepylot.com" style={{ textDecoration: 'underline', fontWeight: 'bold' }}>Pacepylot</NextLink> AI assistant app controlled by nature language, and numerous interactive playable ads for
+            mobile games. You can explore more of my work in the <NextLink href="/works">Portfolio</NextLink> section below.
           </Paragraph>
 
           <Box textAlign="center" my={8}>
             <NextLink href="/works">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                My Porfolio
+                My Portfolio
               </Button>
             </NextLink>
           </Box>
@@ -125,7 +126,7 @@ export default function Home() {
             Favorites 🎨
           </Heading>
           <Paragraph>
-            Games, Graphics Design, Pixel Art, Game development.
+            Games, Guitar, Photography, Traveling, Challenge works, Explore new things,...
           </Paragraph>
         </Section>
 
@@ -140,8 +141,7 @@ export default function Home() {
                   href={item.link}
                   display="flex"
                   alignItems="center"
-                  // eslint-disable-next-line react-hooks/rules-of-hooks
-                  color={useColorModeValue("glassTeal-dark", "glassTeal")}
+                  color={linkColor}
                   target="_blank"
                 >
                   {item.icon} <Box mx={2}></Box>{" "}

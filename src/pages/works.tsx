@@ -10,15 +10,14 @@ import Section from "@/components/section";
 import { WorkGridItem } from "@/components/grid-item";
 import { webDevelopment, mobileDevelopment, otherProjects } from "@/data/data";
 import Layout from "@/components/layouts/article";
-import styled from "@emotion/styled";
 
 export default function Works() {
   return (
     <Layout title="Projects">
       <Container px={0} py={6}>
         <Box>
-          Với vai trò là một Web Developer, Mobile Developer. Dưới đây là một số
-          dự án tôi đã và đang làm. Enjoy🎈
+          As a Fullstack Developer and Playable Ads Developer, here are some of 
+          the projects I&apos;ve worked on throughout my career. Enjoy exploring! 🎈
         </Box>
       </Container>
       <Container px={0} pb={4}>

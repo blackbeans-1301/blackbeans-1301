@@ -6,18 +6,26 @@ import fourhandyFlutterThumbnail from "../../public/thumbnail/4handy-flutter.png
 import savorThumbnail from "../../public/thumbnail/savor.png";
 import flappybirdThumbnail from "../../public/thumbnail/flappy-bird.jpg";
 import bedtimeThumbnail from "../../public/thumbnail/bedtime.png";
-import portfolioThumbnail from "../../public/thumbnail/portfolio-thumbnail.png";
-
 export const bioData = [
   {
     id: 1,
     year: "2020",
-    description: "Bắt đầu học CNTT tại trường Đại học Công nghệ - ĐHQGHN(UET).",
+    description: "Started studying Computer Science at University of Engineering and Technology - VNU Hanoi (UET).",
   },
   {
     id: 2,
     year: "2022",
-    description: "Làm việc tại 4Handy với vai trò fullstack/mobile developer.",
+    description: "Worked at 4Handy as a Fullstack/Mobile Developer.",
+  },
+  {
+    id: 3,
+    year: "2023 - now",
+    description: "Work at Sonatgame Studio as fullstack developer and playable ads developer.",
+  },
+  {
+    id: 4,
+    year: "2024",
+    description: "Graduated from UET with Bachelor's degree in Computer Science. Currently working as a Fullstack and Playable Ads Developer.",
   },
 ];
 
@@ -42,17 +50,17 @@ export const navbarItems = [
 export const skillSet = [
   {
     id: 1,
-    category: "Programming Language",
-    skills: ["JavaScript/Python/Dart"],
+    category: "Programming Languages",
+    skills: ["JavaScript/TypeScript", "Python", "Dart", "C#", "...etc"],
   },
   {
     id: 2,
     category: "Web Development",
     skills: [
-      "Responsive",
-      "AngularJS",
-      "ReactJS và React Framework như Gatsby, Next",
-      "NodeJS, Flask (python)",
+      "Responsive Design",
+      "React, Next.js, Svelte, AngularJS",
+      "Node.js, Express, NestJS",
+      "Flask (Python)",
     ],
   },
   {
@@ -62,16 +70,22 @@ export const skillSet = [
   },
   {
     id: 4,
-    category: "Database",
-    skills: ["MySql Server", "MongoDB"],
+    category: "Playable Ads & Game Development",
+    skills: ["Unity (Luna)", "Cocos Creator"],
   },
   {
     id: 5,
-    category: "External Skills",
+    category: "Database & Tools",
+    skills: ["MySQL", "MongoDB", "Git", "Docker", "Linux Admin"],
+  },
+  {
+    id: 6,
+    category: "Soft Skills",
     skills: [
-      "Nghe/Đọc/Hiểu tiếng Anh và giao tiếp cơ bản.",
-      "Tiếp thu nhanh, có khả năng tự học.",
-      "Thiết kế giao diện ứng dụng cơ bản (basic UI design).",
+      "English proficiency (reading, writing, speaking)",
+      "Quick learner with self-study ability",
+      "Team collaboration",
+      "Quick adaptation to new environments",
     ],
   },
 ];
@@ -82,9 +96,9 @@ export const webDevelopment = [
     title: "Savor",
     createdAt: "2022",
     shortDescription:
-      "Ứng dụng web giới thiệu các mẫu bánh sinh nhật và đặt hàng online.",
+      "Web application for showcasing birthday cakes and online ordering.",
     description:
-      "Savor là web dùng để giới thiệu các mẫu bánh của hệ thống bánh ngọt - trà sữa Savor. Trang web này nhằm giới thiệu các mẫu bánh kem và cho phép người dùng đặt bánh online.",
+      "Savor is a web application designed to showcase cake designs from the Savor bakery and tea system. This website presents various cake models and allows users to order cakes online.",
     platform: "Windows/macOS/Linux/iOS/Android",
     stack: "ReactJS, TailwindCss, 4Handy API.",
     position: "Front-end Developer",
@@ -99,11 +113,11 @@ export const webDevelopment = [
     id: "four-handy-work",
     title: "4Handy Work",
     createdAt: "2022",
-    shortDescription: "Web quản lý công việc tại 4Handy.",
-    description: "Web quản lý công việc tại 4Handy.",
+    shortDescription: "Task management web application for 4Handy company.",
+    description: "A comprehensive task management system developed for 4Handy company to streamline workflow and team collaboration.",
     platform: "Windows/macOS/Linux/iOS/Android",
     stack: "AngularJS, MongoDB, ExpressJS, Redis.",
-    position: "FullStack Developer.",
+    position: "FullStack Developer",
     githubUrl: "private",
     thumbnail: fourhandyThumbnail,
     images: [
@@ -116,12 +130,12 @@ export const webDevelopment = [
     title: "Booking Hub",
     createdAt: "2022",
     shortDescription:
-      "Ứng dụng web hỗ trợ đặt phòng khách sạn/nhà nghỉ online cho du khách.",
+      "Online hotel and accommodation booking platform for travelers.",
     description:
-      "Booking Hub hướng đến người sử dụng là những lữ khách du lịch nhằm phục vụ việc đặt phòng thuê khách sạn/nhà nghỉ.",
+      "Booking Hub is a web application designed for travelers to easily search and book hotels and accommodations online. Features include room browsing, availability checking, and secure booking system.",
     platform: "Windows/macOS/Linux/iOS/Android",
     stack: "ReactJS, TailwindCSS, ExpressJS, MySQL database",
-    position: "Front-end developer",
+    position: "Front-end Developer",
     githubUrl: "https://github.com/blackbeans-1301/BookingHub",
     thumbnail: bookinghubThumbnail,
     images: [
@@ -133,12 +147,12 @@ export const webDevelopment = [
     id: "chew",
     title: "ChewChew",
     createdAt: "2021",
-    shortDescription: "Trang web bán đồ cho thú cưng.",
+    shortDescription: "E-commerce website for pet supplies.",
     description:
-      "ChewChew được tạo ra với mục đích làm trang web bán đồ cho thú cưng. Lấy cảm hứng từ Chewy.",
+      "ChewChew is an e-commerce platform created for selling pet supplies and accessories. Inspired by Chewy, it provides a user-friendly shopping experience for pet owners.",
     platform: "Windows/macOS/Linux/iOS/Android",
-    stack: "Html, CSS, Javascript, ExpressJS, MongoDB",
-    position: "Front-end developer",
+    stack: "HTML, CSS, JavaScript, ExpressJS, MongoDB",
+    position: "Front-end Developer",
     githubUrl: "https://github.com/blackbeans-1301/chew",
     thumbnail: chewchewThumbnail,
     images: ["https://i.imgur.com/nvdoGs4.png"],
@@ -151,9 +165,9 @@ export const mobileDevelopment = [
     title: "Blackhole",
     createdAt: "2022",
     shortDescription:
-      "Ứng dụng nghe nhạc trực tuyến dành cho thiết bị di động.",
+      "Online music streaming mobile application.",
     description:
-      "Blackhole là một ứng dụng nghe nhạc dành cho các thiết bị di động với giao diện thân thiện và dễ sử dụng cùng với kho nhạc online phong phú.",
+      "Blackhole is a music streaming application for mobile devices with a user-friendly interface and extensive online music library. Features include playlist management, offline playback, and music discovery.",
     platform: "Android",
     stack: "React Native, Expo, Android Studio",
     position: "Fullstack/Mobile Developer",
@@ -169,11 +183,11 @@ export const mobileDevelopment = [
     title: "4Handy Mobile",
     createdAt: "2021",
     shortDescription:
-      "Ứng dụng quản lý công việc tại 4Handy dành cho thiết bị di động.",
+      "Mobile task management application for 4Handy company.",
     description:
-      "Ứng dụng quản lý công việc tại 4Handy dành cho thiết bị di động.",
+      "A mobile version of the 4Handy task management system, built with Flutter for cross-platform compatibility. Enables team members to manage tasks, track progress, and collaborate on-the-go.",
     platform: "Android/iOS",
-    stack: "Flutter, 4Handy API, Android Studio, Firebase.",
+    stack: "Flutter, 4Handy API, Android Studio, Firebase",
     position: "Mobile Developer",
     githubUrl: "private",
     thumbnail: fourhandyFlutterThumbnail,
@@ -187,11 +201,11 @@ export const mobileDevelopment = [
     title: "Bedtime",
     createdAt: "2023",
     shortDescription:
-      "Ứng dụng hỗ trợ cho việc tăng chất lượng giấc ngủ dành cho di động.",
+      "Mobile application to improve sleep quality and tracking.",
     description:
-      "Ứng dụng hỗ trợ cho việc tăng chất lượng giấc ngủ dành cho di động.",
+      "Bedtime is a mobile app designed to help users improve their sleep quality through tracking, analysis, and relaxation features. Includes sleep monitoring, bedtime reminders, and soothing sounds.",
     platform: "Android/iOS",
-    stack: "Flutter, Android Studio, Firebase.",
+    stack: "Flutter, Android Studio, Firebase",
     position: "Mobile Developer",
     githubUrl: "https://github.com/blackbeans-1301/bedtime",
     thumbnail: bedtimeThumbnail,
@@ -204,11 +218,11 @@ export const otherProjects = [
     id: "flappy-bird",
     title: "Flappy Bird Clone",
     createdAt: "2020",
-    shortDescription: "Bản Clone của game Flappy Bird.",
-    description: "Bản Clone của game Flappy Bird.",
+    shortDescription: "A clone of the popular Flappy Bird game.",
+    description: "A recreation of the classic Flappy Bird game built with C++ and SDL2, demonstrating game development fundamentals and object-oriented programming principles.",
     platform: "Windows",
     stack: "C++, SDL2, Object-Oriented Programming",
-    position: "Game developer",
+    position: "Game Developer",
     githubUrl: "https://github.com/blackbeans-1301/flappy-bird-clone",
     thumbnail: flappybirdThumbnail,
     images: [

@@ -1,4 +1,3 @@
-import { resolve } from "path";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
