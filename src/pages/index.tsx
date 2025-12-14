@@ -1,27 +1,24 @@
+import { BioSection, BioYear } from "@/components/bio";
+import Highlighter from "@/components/highlighter";
+import Layout from "@/components/layouts/article";
+import Paragraph from "@/components/paragraph";
+import Section from "@/components/section";
+import SkillSetSection from "@/components/skillSet";
+import { bioData, skillSet } from "@/data/data";
+import { socialMedia } from "@/data/socialData";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
-  Container,
   Box,
+  Button,
+  Container,
   Heading,
   Image,
-  useColorModeValue,
-  Button,
-  SimpleGrid,
+  Link,
   List,
   ListItem,
-  Link,
-  Icon,
+  useColorModeValue
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { GridItem } from "@/components/grid-item";
-import Section from "@/components/section";
-import Paragraph from "@/components/paragraph";
-import Highlighter from "@/components/highlighter";
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import { BioYear, BioSection } from "@/components/bio";
-import { bioData, skillSet } from "@/data/data";
-import SkillSetSection from "@/components/skillSet";
-import Layout from "@/components/layouts/article";
-import { socialMedia } from "@/data/socialData";
 
 export default function Home() {
   const introColor = useColorModeValue("whiteAlpha.500", "whiteAlpha.200");

@@ -1,11 +1,12 @@
-import blackholeThumbnail from "../../public/thumbnail/blackhole.jpg";
-import bookinghubThumbnail from "../../public/thumbnail/booking.png";
-import chewchewThumbnail from "../../public/thumbnail/chewchew.png";
-import fourhandyThumbnail from "../../public/thumbnail/4handy.png";
 import fourhandyFlutterThumbnail from "../../public/thumbnail/4handy-flutter.png";
-import savorThumbnail from "../../public/thumbnail/savor.png";
-import flappybirdThumbnail from "../../public/thumbnail/flappy-bird.jpg";
+import fourhandyThumbnail from "../../public/thumbnail/4handy.png";
 import bedtimeThumbnail from "../../public/thumbnail/bedtime.png";
+import blackholeThumbnail from "../../public/thumbnail/blackhole.jpg";
+import flappybirdThumbnail from "../../public/thumbnail/flappy-bird.jpg";
+import savorThumbnail from "../../public/thumbnail/savor.png";
+import mindboardThumbnail from "../../public/thumbnail/mindboardThumbnail.png";
+import plmath from "../../public/thumbnail/plm.png";
+
 export const bioData = [
   {
     id: 1,
@@ -58,8 +59,8 @@ export const skillSet = [
     category: "Web Development",
     skills: [
       "Responsive Design",
-      "React, Next.js, Svelte, AngularJS",
-      "Node.js, Express, NestJS",
+      "Next.js, SvelteKit, AngularJS",
+      "Node.js, ExpressJS, NestJS",
       "Flask (Python)",
     ],
   },
@@ -76,7 +77,7 @@ export const skillSet = [
   {
     id: 5,
     category: "Database & Tools",
-    skills: ["MySQL", "MongoDB", "Git", "Docker", "Linux Admin"],
+    skills: ["MySQL", "MongoDB", "Git", "Docker", "Linux Admin", "GH Actions"],
   },
   {
     id: 6,
@@ -91,6 +92,40 @@ export const skillSet = [
 ];
 
 export const webDevelopment = [
+  {
+    id: "mindboard",
+    title: "Mindboard",
+    createdAt: "2025",
+    shortDescription:
+      "Web application AI chat node based.",
+    description:
+      "Mindboard (mindboard.space) is a web application that allows you to create a mind map of your thoughts and ideas. It is a tool that helps you organize your thoughts and ideas in a visual way.",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "ReactJS, TailwindCss",
+    position: "Fullstack Developer",
+    githubUrl: "private",
+    thumbnail: mindboardThumbnail,
+    images: [
+      "/images/mindboard1.png",
+    ],
+  },
+  {
+    id: "plmath",
+    title: "PLMath",
+    createdAt: "2023",
+    shortDescription:
+      "Learning Center Management System",
+    description:
+      "PlMath is a learning center management system that allows to manage your students, courses, and teachers. It is a tool that helps organize your learning center.",
+    platform: "Windows/macOS/Linux/iOS/Android",
+    stack: "NextJs",
+    position: "Fullstack Developer",
+    githubUrl: "private",
+    thumbnail: plmath,
+    images: [
+      "/thumbnail/plm.png"
+    ],
+  },
   {
     id: "savor",
     title: "Savor",
@@ -124,38 +159,59 @@ export const webDevelopment = [
       "https://i.imgur.com/konUosS.png",
       "https://i.imgur.com/8yZFdGm.png",
     ],
+  }
+];
+
+export const playableAdsDevelopment = [
+  {
+    id: "Hole Master",
+    title: "Hole Master",
+    description: "Created with cocos creator",
+    image: "https://play-lh.googleusercontent.com/bdooQoqgw2AtKuZlXFm15voIpqguYpr_OWVcQ6Gde82Xa98lsdiiSM1c2WwWHxXDI1s",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.hole.master.eat.world.game&hl=en"
   },
   {
-    id: "booking-hub",
-    title: "Booking Hub",
-    createdAt: "2022",
-    shortDescription:
-      "Online hotel and accommodation booking platform for travelers.",
-    description:
-      "Booking Hub is a web application designed for travelers to easily search and book hotels and accommodations online. Features include room browsing, availability checking, and secure booking system.",
-    platform: "Windows/macOS/Linux/iOS/Android",
-    stack: "ReactJS, TailwindCSS, ExpressJS, MySQL database",
-    position: "Front-end Developer",
-    githubUrl: "https://github.com/blackbeans-1301/BookingHub",
-    thumbnail: bookinghubThumbnail,
-    images: [
-      "https://i.imgur.com/qtIsLQM.png",
-      "https://i.imgur.com/kY7mJu9.png",
-    ],
+    id: "Tangle Rope 3D",
+    title: "Tangle Rope 3D",
+    description: "HTML",
+    image: "https://play-lh.googleusercontent.com/r2WLR91MR9yAefRw3O2hjeG6lCnqKP-KFSjGlzuf53CiAOANMK_4ov76OJbZnVDUxHOJpwFNOSJnbOZTCDU-dw",
+    storeUrl: "https://play.google.com/store/apps/details?id=tangle3d.twistedrope.untie.untangle&hl=en"
   },
   {
-    id: "chew",
-    title: "ChewChew",
-    createdAt: "2021",
-    shortDescription: "E-commerce website for pet supplies.",
-    description:
-      "ChewChew is an e-commerce platform created for selling pet supplies and accessories. Inspired by Chewy, it provides a user-friendly shopping experience for pet owners.",
-    platform: "Windows/macOS/Linux/iOS/Android",
-    stack: "HTML, CSS, JavaScript, ExpressJS, MongoDB",
-    position: "Front-end Developer",
-    githubUrl: "https://github.com/blackbeans-1301/chew",
-    thumbnail: chewchewThumbnail,
-    images: ["https://i.imgur.com/nvdoGs4.png"],
+    id: "Grill Cooking: Sort Challenge",
+    title: "Grill Cooking: Sort Challenge",
+    description: "Unity Luna",
+    image: "https://play-lh.googleusercontent.com/ctLU7H1G6jmWx4dVO30j2UtxHIxY1SZfq0JYtviaZ_pYp9Gn4hM7Ghqbhc7eYAmnNbGfKF2_j1dkNx5GoBv0Wg",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.grill.sorting.food.match.puzzle&hl=en"
+  },
+  {
+    id: "Flower Sort: Bloom Puzzle Game",
+    title: "Flower Sort: Bloom Puzzle Game",
+    description: "Unity Luna",
+    image: "https://play-lh.googleusercontent.com/1xMkoZVMJ_b-8g1vmWaVhltxSvjx1f-KFzaJh5ZSAGUZGcU5ZvDZBt6ITpTJbMr3E40",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.flower.puzzle.blossom.sort.color&hl=en"
+  },
+  {
+    id: "Wool Sorting: Unravel Yarn 3D",
+    title: "Wool Sorting: Unravel Yarn 3D",
+    description: "Unity Luna",
+    image: "https://play-lh.googleusercontent.com/3ZS8d1bXV0wZJTHfqWvMwa-0vFqCN-AsZG6iN1plkkMDvpL6mZZjVaMbTN-pkQgMc0A",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.wool3d.yarn.sort.jam.puzzle&hl=en"
+  },
+  {
+    id: "Satiszone: Perfect ASMR Tidy",
+    title: "Satiszone: Perfect ASMR Tidy",
+    description: "Unity Luna",
+    image: "https://play-lh.googleusercontent.com/m_Crai--W6HGBz79HFV1iZVtgtkTfQ3mA9lCDGnbNNKbiXKRtVGlNtDTZSfto5gGLQ",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.satisfy.asmr.relax.perfect.tidy&hl=en"
+  }
+  ,
+  {
+    id: "Cozy Life: Decor Room",
+    title: "Cozy Life: Decor Room",
+    description: "Unity Luna",
+    image: "https://play-lh.googleusercontent.com/LD8PAwog7h9KFG6EvTfcxdGtzl5tOoVHvKH1E4YcS8OjuENQiztA_N7Hza4ERDESJ1yXo4Fu1s56Q6tm-mNGvQ",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.unpacking.cozy.home.dream&hl=en"
   },
 ];
 

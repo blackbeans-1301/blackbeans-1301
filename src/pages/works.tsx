@@ -3,20 +3,20 @@ import {
   Box,
   Heading,
   SimpleGrid,
-  Divider,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Section from "@/components/section";
 import { WorkGridItem } from "@/components/grid-item";
-import { webDevelopment, mobileDevelopment, otherProjects } from "@/data/data";
+import { webDevelopment, mobileDevelopment, otherProjects, playableAdsDevelopment } from "@/data/data";
 import Layout from "@/components/layouts/article";
+import HorizontalScrollSection from "@/components/horizontal-scroll-section";
 
 export default function Works() {
   return (
     <Layout title="Projects">
       <Container px={0} py={6}>
         <Box>
-          As a Fullstack Developer and Playable Ads Developer, here are some of 
+          As a Fullstack Developer and Playable Ads Developer, here are some of
           the projects I&apos;ve worked on throughout my career. Enjoy exploring! 🎈
         </Box>
       </Container>
@@ -38,6 +38,14 @@ export default function Works() {
             </Section>
           ))}
         </SimpleGrid>
+
+        {/* Playable Ads Horizontal Scroll Section */}
+        <Box mt={12} mb={6}>
+          <Heading as="h4" fontSize={18} mb={4}>
+            Playable Ads Development
+          </Heading>
+          <HorizontalScrollSection items={playableAdsDevelopment} />
+        </Box>
       </Container>
       <Container
         pt={8}
