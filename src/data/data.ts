@@ -168,50 +168,75 @@ export const playableAdsDevelopment = [
     title: "Hole Master",
     description: "Created with cocos creator",
     image: "https://play-lh.googleusercontent.com/bdooQoqgw2AtKuZlXFm15voIpqguYpr_OWVcQ6Gde82Xa98lsdiiSM1c2WwWHxXDI1s",
-    storeUrl: "https://play.google.com/store/apps/details?id=com.hole.master.eat.world.game&hl=en"
+    storeUrl: "https://play.google.com/store/apps/details?id=com.hole.master.eat.world.game&hl=en",
+    demo: ["/playable/hole-master/hole1.html", "/playable/hole-master/hole2.html", "/playable/hole-master/hole3.html"]
   },
   {
     id: "Tangle Rope 3D",
     title: "Tangle Rope 3D",
     description: "HTML",
     image: "https://play-lh.googleusercontent.com/r2WLR91MR9yAefRw3O2hjeG6lCnqKP-KFSjGlzuf53CiAOANMK_4ov76OJbZnVDUxHOJpwFNOSJnbOZTCDU-dw",
-    storeUrl: "https://play.google.com/store/apps/details?id=tangle3d.twistedrope.untie.untangle&hl=en"
+    storeUrl: "https://play.google.com/store/apps/details?id=tangle3d.twistedrope.untie.untangle&hl=en",
+    demo: ["/playable/twisted/twisted1.html", "/playable/twisted/twisted2.html"]
+  },
+  {
+    id: "Tangle Frenzy",
+    title: "Tangle Frenzy3D",
+    description: "Cocos Creator",
+    image: "https://play-lh.googleusercontent.com/GjnCRDGh4RMHGHuqg_vrwz28iFrHWqJVsOvM8fR_STpPmfULYV0cGFvTJ0Qp2nZ8mmY",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.percas.tangle.frenzy.jam.knot.rope.untie",
+    demo: ["/playable/thread-frenzy/tf1.html"]
   },
   {
     id: "Grill Cooking: Sort Challenge",
     title: "Grill Cooking: Sort Challenge",
     description: "Unity Luna",
     image: "https://play-lh.googleusercontent.com/ctLU7H1G6jmWx4dVO30j2UtxHIxY1SZfq0JYtviaZ_pYp9Gn4hM7Ghqbhc7eYAmnNbGfKF2_j1dkNx5GoBv0Wg",
-    storeUrl: "https://play.google.com/store/apps/details?id=com.grill.sorting.food.match.puzzle&hl=en"
+    storeUrl: "https://play.google.com/store/apps/details?id=com.grill.sorting.food.match.puzzle&hl=en",
+    demo: ["https://playground.lunalabs.io/preview/290606/390190/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d", "https://playground.lunalabs.io/preview/288467/387474/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d"]
   },
   {
     id: "Flower Sort: Bloom Puzzle Game",
     title: "Flower Sort: Bloom Puzzle Game",
     description: "Unity Luna",
     image: "https://play-lh.googleusercontent.com/1xMkoZVMJ_b-8g1vmWaVhltxSvjx1f-KFzaJh5ZSAGUZGcU5ZvDZBt6ITpTJbMr3E40",
-    storeUrl: "https://play.google.com/store/apps/details?id=com.flower.puzzle.blossom.sort.color&hl=en"
+    storeUrl: "https://play.google.com/store/apps/details?id=com.flower.puzzle.blossom.sort.color&hl=en",
+    demo: ["https://playground.lunalabs.io/preview/268242/363105/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d",
+      "https://playground.lunalabs.io/preview/264248/358363/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d"
+    ]
   },
   {
     id: "Wool Sorting: Unravel Yarn 3D",
     title: "Wool Sorting: Unravel Yarn 3D",
     description: "Unity Luna",
     image: "https://play-lh.googleusercontent.com/3ZS8d1bXV0wZJTHfqWvMwa-0vFqCN-AsZG6iN1plkkMDvpL6mZZjVaMbTN-pkQgMc0A",
-    storeUrl: "https://play.google.com/store/apps/details?id=com.wool3d.yarn.sort.jam.puzzle&hl=en"
+    storeUrl: "https://play.google.com/store/apps/details?id=com.wool3d.yarn.sort.jam.puzzle&hl=en",
+    demo: ["https://playground.lunalabs.io/preview/297739/399153/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d",
+      "https://playground.lunalabs.io/preview/285351/383764/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d"]
   },
   {
     id: "Satiszone: Perfect ASMR Tidy",
     title: "Satiszone: Perfect ASMR Tidy",
     description: "Unity Luna",
     image: "https://play-lh.googleusercontent.com/m_Crai--W6HGBz79HFV1iZVtgtkTfQ3mA9lCDGnbNNKbiXKRtVGlNtDTZSfto5gGLQ",
-    storeUrl: "https://play.google.com/store/apps/details?id=com.satisfy.asmr.relax.perfect.tidy&hl=en"
-  }
-  ,
+    storeUrl: "https://play.google.com/store/apps/details?id=com.satisfy.asmr.relax.perfect.tidy&hl=en",
+    demo: ["https://playground.lunalabs.io/preview/245618/335427/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d", "https://playground.lunalabs.io/preview/218111/301729/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d", "https://playground.lunalabs.io/preview/245779/335673/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d"]
+  },
   {
     id: "Cozy Life: Decor Room",
     title: "Cozy Life: Decor Room",
     description: "Unity Luna",
     image: "https://play-lh.googleusercontent.com/LD8PAwog7h9KFG6EvTfcxdGtzl5tOoVHvKH1E4YcS8OjuENQiztA_N7Hza4ERDESJ1yXo4Fu1s56Q6tm-mNGvQ",
-    storeUrl: "https://play.google.com/store/apps/details?id=com.unpacking.cozy.home.dream&hl=en"
+    storeUrl: "https://play.google.com/store/apps/details?id=com.unpacking.cozy.home.dream&hl=en",
+    demo: ["https://playground.lunalabs.io/preview/281798/379393/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d", "https://playground.lunalabs.io/preview/247388/337670/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d"]
+  },
+  {
+    id: "Others",
+    title: "Others",
+    description: "Unity Luna",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92PDUHiEiCoYZ63-i-63n99beZo0pvkuuHg&s",
+    storeUrl: "",
+    demo: ["https://playground.lunalabs.io/preview/320190/426973/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d", "https://playground.lunalabs.io/preview/255837/348015/3b8129d01aa236da207be1a6a7f3cadb314a385017889398c34e42393aec589d"]
   },
 ];
 

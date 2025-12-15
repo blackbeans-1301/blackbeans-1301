@@ -6,8 +6,20 @@ import {
   VStack,
   Heading,
   useColorModeValue,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+  SimpleGrid,
+  AspectRatio,
+  HStack,
+  Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 interface PlayableAd {
   id: string;
@@ -15,6 +27,7 @@ interface PlayableAd {
   description: string;
   image: string;
   storeUrl: string;
+  demo?: string[];
 }
 
 interface HorizontalScrollSectionProps {
@@ -24,19 +37,35 @@ interface HorizontalScrollSectionProps {
 export default function HorizontalScrollSection({ items }: HorizontalScrollSectionProps) {
   const [isPaused, setIsPaused] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [selectedItem, setSelectedItem] = useState<PlayableAd | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.300");
   const popupBg = useColorModeValue("white", "gray.800");
   const popupShadow = useColorModeValue("xl", "dark-lg");
   const textColor = useColorModeValue("gray.600", "gray.300");
   const hoverBorderColor = useColorModeValue("gray.400", "whiteAlpha.500");
+  const noDemoBg = useColorModeValue("gray.50", "whiteAlpha.50");
+  const modalBg = useColorModeValue("#f0e7db", "#202023");
   const gradientLight = useColorModeValue(
-    "linear-gradient(to right, white, transparent)",
+    "linear-gradient(to right, #ffffff0, transparent)",
     "linear-gradient(to right, #202023, transparent)"
   );
   const gradientRight = useColorModeValue(
-    "linear-gradient(to left, white, transparent)",
+    "linear-gradient(to left, #ffffff0, transparent)",
     "linear-gradient(to left, #202023, transparent)"
   );
+
+  const handleItemClick = (e: React.MouseEvent, item: PlayableAd) => {
+    e.preventDefault();
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
 
   // Duplicate items for seamless loop
   const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items];
@@ -73,7 +102,7 @@ export default function HorizontalScrollSection({ items }: HorizontalScrollSecti
         display="flex"
         gap={4}
         sx={{
-          animation: "scroll 30s linear infinite",
+          animation: "scroll 50s linear infinite",
           animationPlayState: isPaused ? "paused" : "running",
           "@keyframes scroll": {
             "0%": { transform: "translateX(0)" },
@@ -87,12 +116,10 @@ export default function HorizontalScrollSection({ items }: HorizontalScrollSecti
         }}
       >
         {duplicatedItems.map((item, index) => (
-          <Link
+          <Box
             key={`${item.id}-${index}`}
-            href={item.storeUrl}
-            isExternal
-            _hover={{ textDecoration: "none" }}
             position="relative"
+            onClick={(e) => handleItemClick(e, item)}
           >
             <Box
               minW="150px"
@@ -162,9 +189,179 @@ export default function HorizontalScrollSection({ items }: HorizontalScrollSecti
                 </VStack>
               )}
             </Box>
-          </Link>
+          </Box>
         ))}
       </Box>
+
+      {/* Modal for game details */}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} size="5xl" isCentered>
+        <ModalOverlay bg="blackAlpha.700" backdropFilter="blur(4px)" />
+        <ModalContent
+          maxH="90vh"
+          borderRadius="2xl"
+          overflow="hidden"
+          bg={modalBg}
+        >
+          <ModalCloseButton
+            size="lg"
+            _hover={{ bg: useColorModeValue("gray.100", "whiteAlpha.200") }}
+            borderRadius="full"
+          />
+
+          <ModalBody p={0} overflowY="auto" maxH="90vh">
+            <Box>
+              {/* Header Section with Icon */}
+              <HStack
+                p={8}
+                spacing={6}
+                align="flex-start"
+                borderBottom="1px solid"
+                borderColor={borderColor}
+              >
+                <Image
+                  src={selectedItem?.image}
+                  alt={selectedItem?.title}
+                  boxSize="100px"
+                  borderRadius="xl"
+                  objectFit="cover"
+                  flexShrink={0}
+                  border="2px solid"
+                  borderColor={borderColor}
+                  shadow="md"
+                />
+                <VStack align="flex-start" spacing={3} flex={1}>
+                  <Heading size="xl" fontWeight="bold">
+                    {selectedItem?.title}
+                  </Heading>
+                  <Text fontSize="md" color={textColor} lineHeight="tall">
+                    {selectedItem?.description}
+                  </Text>
+                  {selectedItem?.storeUrl && (
+                    <Link href={selectedItem.storeUrl} isExternal>
+                      <Button
+                        size="sm"
+                        colorScheme="teal"
+                        rightIcon={<ExternalLinkIcon />}
+                        borderRadius="full"
+                      >
+                        View on Store
+                      </Button>
+                    </Link>
+                  )}
+                </VStack>
+              </HStack>
+
+              {/* Demo Section */}
+              <Box p={8}>
+                {selectedItem?.demo && selectedItem.demo.length > 0 ? (
+                  <VStack spacing={6} align="stretch">
+                    <SimpleGrid columns={[1, 1, 2]} spacing={6}>
+                      {selectedItem.demo.map((demoUrl, idx) => {
+                        const isLocalDemo = demoUrl.startsWith('/');
+                        const isLunaPlayground = demoUrl.includes('playground.lunalabs.io');
+
+                        return (
+                          <Box key={idx}>
+                            <HStack justify="space-between" mb={3}>
+                              <Text fontSize="sm" fontWeight="semibold" color={textColor}>
+                                Demo {idx + 1}
+                              </Text>
+                              <Link href={demoUrl} isExternal>
+                                <Button
+                                  size="xs"
+                                  variant="ghost"
+                                  rightIcon={<ExternalLinkIcon />}
+                                  colorScheme="teal"
+                                >
+                                  Open in new tab
+                                </Button>
+                              </Link>
+                            </HStack>
+
+                            {isLocalDemo ? (
+                              <AspectRatio ratio={9 / 16} maxW="300px" mx="auto">
+                                <Box
+                                  as="iframe"
+                                  src={demoUrl}
+                                  title={`${selectedItem.title} - Demo ${idx + 1}`}
+                                  border="1px solid"
+                                  borderColor={borderColor}
+                                  borderRadius="xl"
+                                  overflow="hidden"
+                                  bg={noDemoBg}
+                                />
+                              </AspectRatio>
+                            ) : (
+                              <Link href={demoUrl} isExternal>
+                                <Box
+                                  position="relative"
+                                  w="300px"
+                                  h="533px"
+                                  mx="auto"
+                                  border="1px solid"
+                                  borderColor={borderColor}
+                                  borderRadius="xl"
+                                  overflow="hidden"
+                                  bg={noDemoBg}
+                                  cursor="pointer"
+                                  transition="all 0.2s"
+                                  _hover={{
+                                    transform: "scale(1.02)",
+                                    borderColor: hoverBorderColor,
+                                  }}
+                                >
+                                  <VStack
+                                    position="absolute"
+                                    top="50%"
+                                    left="50%"
+                                    transform="translate(-50%, -50%)"
+                                    spacing={4}
+                                    textAlign="center"
+                                    p={6}
+                                  >
+                                    <ExternalLinkIcon boxSize={12} color={textColor} />
+                                    <VStack spacing={2}>
+                                      <Text fontWeight="semibold" fontSize="md">
+                                        {isLunaPlayground ? 'Luna Playground Demo' : 'External Demo'}
+                                      </Text>
+                                      <Text fontSize="sm" color={textColor}>
+                                        Click to open in new window
+                                      </Text>
+                                    </VStack>
+                                    <Button
+                                      size="sm"
+                                      colorScheme="teal"
+                                      rightIcon={<ExternalLinkIcon />}
+                                      borderRadius="full"
+                                    >
+                                      Play Demo
+                                    </Button>
+                                  </VStack>
+                                </Box>
+                              </Link>
+                            )}
+                          </Box>
+                        );
+                      })}
+                    </SimpleGrid>
+                  </VStack>
+                ) : (
+                  <Box
+                    p={12}
+                    textAlign="center"
+                    borderRadius="xl"
+                    bg={noDemoBg}
+                  >
+                    <Text color={textColor} fontSize="sm">
+                      No playable demos available for this game.
+                    </Text>
+                  </Box>
+                )}
+              </Box>
+            </Box>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 }

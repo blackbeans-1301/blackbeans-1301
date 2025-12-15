@@ -41,7 +41,7 @@ export default function Works() {
 
         {/* Playable Ads Horizontal Scroll Section */}
         <Box mt={12} mb={6}>
-          <Heading as="h4" fontSize={18} mb={4}>
+          <Heading as="h3" fontSize={20} mb={6} variant="section-title">
             Playable Ads Development
           </Heading>
           <HorizontalScrollSection items={playableAdsDevelopment} />
